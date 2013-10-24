@@ -9,12 +9,11 @@ public class ConfigLoader {
 	private static final String ALFRESCO_USER_KEY = "alfresco.user";
 	private static final String ALFRESCO_USER_PASSWORD_KEY = "alfresco.password";
 	
-	
 	static Properties prop = new Properties();
 	
 	static{
 		try {
-			prop.load(ConfigLoader.class.getClassLoader().getResourceAsStream("config.properties"));
+			prop.load(ConfigLoader.class.getClassLoader().getResourceAsStream("alfresco/webserviceclient.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
